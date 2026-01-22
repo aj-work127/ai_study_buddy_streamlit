@@ -1,12 +1,11 @@
 import os
 import logging
 import streamlit as st
-from dotenv import load_dotenv
 from google import genai
 from prompts import PROMPT_MAP
 
-# Setup
-load_dotenv()
+
+API_KEY = os.getenv("GOOGLE_API_KEY")
 logging.basicConfig(level=logging.INFO)
 
 API_KEY = os.getenv("GEMINI_API_KEY")
